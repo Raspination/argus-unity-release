@@ -1,0 +1,34 @@
+Argus Profiler — Unity package
+
+Copyright (c) 2026 Argus. All rights reserved.
+
+This software is licensed for use as part of a paid Argus dashboard
+subscription. Possession of this package does not grant any of the
+following rights:
+
+  - Redistribution, in source or compiled form, in whole or in part
+  - Sublicensing, sale, lease, or rental
+  - Use in any product or service that competes with Argus
+  - Removal or modification of copyright notices
+  - Reverse engineering, decompilation, or disassembly except to the
+    extent expressly permitted by applicable mandatory law
+
+A paid Argus subscription grants the right to integrate this package
+into the licensee's own Unity projects (commercial and non-commercial)
+and to ship the compiled output as part of those projects.
+
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR
+ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+For commercial licensing inquiries: license@argus.example.com
+
+---
+NOTE TO OPERATOR: This is a placeholder license drafted for v0 shipping.
+Replace before first paying customer with the lawyer-reviewed EULA per
+tasks/ship-in-two-weeks.md Day 4. The placeholders argus.example.com +
+license@argus.example.com should also become real once the production
+domain is registered.

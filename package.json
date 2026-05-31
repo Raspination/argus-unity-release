@@ -1,0 +1,25 @@
+{
+  "name": "com.argus.profiler",
+  "version": "2.0.3",
+  "displayName": "Argus Profiler",
+  "description": "Unity performance profiling utility. Captures per-event frame data, region attribution, and device diagnostics; uploads to the Argus dashboard for visualisation, regression alerts, and AI-assisted optimisation reports.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Argus",
+    "url": "https://argus-profiler.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raspination/argus-unity-release.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Raspination/argus-unity-release/issues",
+    "email": "support@argus-profiler.com"
+  },
+  "homepage": "https://argus-profiler.com",
+  "keywords": ["profiler", "performance", "analytics", "ai", "claude"],
+  "dependencies": {
+    "com.unity.editorcoroutines": "1.0.0"
+  },
+  "type": "tool"
+}

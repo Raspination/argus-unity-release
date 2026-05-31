@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "argus-local",
+  "description": "Local marketplace for the Argus Unity profiler plugin.",
+  "owner": {
+    "name": "Moai Games"
+  },
+  "plugins": [
+    {
+      "name": "argus",
+      "description": "Analyze Argus profiling captures out of the box. Use /argus:latest, /argus:compare, /argus:verify, or ask Claude about FPS, frame time, GC, memory, draw calls.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Moai Games"
+      },
+      "source": "./plugins/argus",
+      "category": "profiling",
+      "strict": false
+    }
+  ]
+}
