@@ -4,6 +4,11 @@ All notable changes to `com.argus-profiler.unity` are documented here. The forma
 
 ## [Unreleased]
 
+## [2.2.1] — 2026-09-19
+
+### Fixed
+- **iOS Local Network keys always applied.** The Info.plist post-process that adds `NSLocalNetworkUsageDescription` / `NSBonjourServices` to iOS development builds is now always part of the Editor assembly. Previously it was compiled in only when the SDK happened to be exported from a project whose active build target was iOS, and it required iOS Build Support on the importing machine to load.
+
 ## [2.2.0] — 2026-09-19
 
 ### Added
