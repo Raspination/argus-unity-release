@@ -4,6 +4,15 @@ All notable changes to `com.argus-profiler.unity` are documented here. The forma
 
 ## [Unreleased]
 
+## [2.2.2] — 2026-09-19
+
+### Added
+- **Demo scene.** The Asset Store package now ships `Demo/ArgusDemo.unity`: press Play and a capture fires on start while the setup steps are drawn on screen (`ArgusDemoTrigger` → *Show Instructions*).
+- **Offline manual.** `Documentation/Argus-Profiler-Manual.pdf` (rendered from the README, with table of contents) ships in the Asset Store package and is attached to each GitHub Release.
+
+### Fixed
+- **Fast Enter Play mode (no domain reload).** Per-run static state — event dedup, region stats, hang-suppression counter, the WebGL bridge pump's subscriber list, the device session id — is now reset at `SubsystemRegistration`, so repeated Play sessions with domain reload disabled (the Unity 6.6 default) no longer carry state over.
+
 ## [2.2.1] — 2026-09-19
 
 ### Fixed

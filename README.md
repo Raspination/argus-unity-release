@@ -13,7 +13,7 @@ Production performance profiling for Unity games. Captures per-frame data, code-
 **Window → Package Manager → + → Add package from git URL**, paste:
 
 ```
-https://github.com/Raspination/argus-unity-release.git#v2.2.1
+https://github.com/Raspination/argus-unity-release.git#v2.2.2
 ```
 
 (Omitting the `#v...` tag suffix tracks `main` and picks up future versions on **Window → Package Manager → Refresh**.)
@@ -21,7 +21,7 @@ https://github.com/Raspination/argus-unity-release.git#v2.2.1
 To pin the version for a whole team, add it to `Packages/manifest.json` instead:
 
 ```json
-"com.argus-profiler.unity": "https://github.com/Raspination/argus-unity-release.git#v2.2.1"
+"com.argus-profiler.unity": "https://github.com/Raspination/argus-unity-release.git#v2.2.2"
 ```
 
 ### Via .unitypackage
