@@ -19,7 +19,7 @@ The deliberate trade-offs:
 - **Public install URL.** The repo is public so Unity Package Manager git-URL installs work without credential setup. Public means the bytes are downloadable; we accept that as the cost of frictionless install.
 - **No license phone-home.** The dashboard's per-API-key rate limits, plan-tier quotas, and the dashboard service itself are the commercial moat — not client-side license checks.
 
-If you need source-level access (for an enterprise security review, custom transport, in-house build pipeline), contact <support@argus-profiler.com>.
+If you need source-level access (for an enterprise security review, custom transport, in-house build pipeline), contact <roman@moaigames.io>.
 
 ---
 
@@ -27,7 +27,7 @@ If you need source-level access (for an enterprise security review, custom trans
 
 Please report security issues privately, not via public issues.
 
-- **Email:** `security@argus-profiler.com` (PGP key available on request)
+- **Email:** `roman@moaigames.io` (PGP key available on request)
 - **GitHub Security Advisories:** open a private advisory on this repo via the **Security** tab
 - **Response SLA:** acknowledgement within 2 business days. Fix windows per severity:
   - Critical: 7 days to mitigation, disclosed 30 days later

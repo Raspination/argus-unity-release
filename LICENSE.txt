@@ -1,34 +1,91 @@
 Argus Profiler — Unity package
+Beta Software License Agreement (Commercial Beta / Closed Source)
 
 Copyright (c) 2026 Argus. All rights reserved.
 
-This software is licensed for use as part of a paid Argus dashboard
-subscription. Possession of this package does not grant any of the
-following rights:
+This Beta Software License Agreement ("Agreement") is a legal agreement
+between you (the "Licensee") and Argus ("Licensor") governing the Argus
+Profiler Unity package, including its compiled assemblies, bundled
+integration files, and accompanying documentation (collectively, the
+"Software"). By downloading, installing, or using the Software you accept
+this Agreement. If you do not accept it, do not install or use the Software.
 
-  - Redistribution, in source or compiled form, in whole or in part
-  - Sublicensing, sale, lease, or rental
-  - Use in any product or service that competes with Argus
-  - Removal or modification of copyright notices
-  - Reverse engineering, decompilation, or disassembly except to the
-    extent expressly permitted by applicable mandatory law
+1. BETA STATUS
+   The Software is pre-release beta software made available for evaluation
+   and testing during the Argus beta program. It is not a final product,
+   may contain defects, and may change or be withdrawn at any time without
+   notice. Features, formats, and APIs are not guaranteed to be stable and
+   may differ from any future generally available release.
 
-A paid Argus subscription grants the right to integrate this package
-into the licensee's own Unity projects (commercial and non-commercial)
-and to ship the compiled output as part of those projects.
+2. LICENSE GRANT
+   Subject to this Agreement, Licensor grants Licensee a limited,
+   non-exclusive, non-transferable, non-sublicensable, revocable license to
+   install and use the Software, in its compiled form only, solely to
+   integrate it into Licensee's own Unity projects for the purpose of
+   evaluating the Software during the beta period. Licensee may ship the
+   compiled output of those projects to end users.
 
-THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR
-ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN
-CONNECTION WITH THE SOFTWARE OR ITS USE.
+3. RESTRICTIONS
+   Except to the extent expressly permitted by applicable mandatory law,
+   Licensee shall not:
+     - redistribute, publish, or otherwise make the Software available to
+       any third party, in source or compiled form, in whole or in part,
+       except as compiled output embedded in Licensee's own application;
+     - sublicense, sell, lease, rent, or lend the Software;
+     - use the Software in or to build any product or service that competes
+       with Argus;
+     - reverse engineer, decompile, or disassemble the Software, or attempt
+       to derive its source code;
+     - remove, obscure, or alter any copyright, trademark, or other
+       proprietary notices.
 
-For commercial licensing inquiries: license@argus.example.com
+4. OWNERSHIP / INTELLECTUAL PROPERTY
+   The Software is licensed, not sold. Licensor and its licensors retain all
+   right, title, and interest in and to the Software, including all
+   intellectual property rights therein. No rights are granted other than
+   those expressly set out in this Agreement.
+
+5. FEEDBACK
+   Any feedback, suggestions, or reports Licensee provides about the Software
+   may be used by Licensor for any purpose without restriction or obligation.
+
+6. CONFIDENTIALITY
+   The Software and any non-public information disclosed in connection with
+   the beta program are confidential and shall not be disclosed to third
+   parties without Licensor's prior written consent.
+
+7. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF
+   ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+   BEING BETA SOFTWARE, IT MAY BE INCOMPLETE OR CONTAIN ERRORS, AND LICENSEE
+   USES IT AT ITS OWN RISK.
+
+8. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL LICENSOR BE
+   LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
+   DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM OR IN
+   CONNECTION WITH THE SOFTWARE OR THIS AGREEMENT, EVEN IF ADVISED OF THE
+   POSSIBILITY OF SUCH DAMAGES.
+
+9. TERM AND TERMINATION
+   This Agreement is effective until terminated. It terminates automatically
+   if Licensee breaches any term, and Licensor may terminate it or end the
+   beta program at any time. Upon termination Licensee must stop using and
+   destroy all copies of the Software. Sections 3, 4, 5, 6, 7, 8, and 10
+   survive termination.
+
+10. GENERAL
+    This Agreement is the entire agreement between the parties regarding the
+    Software and supersedes any prior understandings. If any provision is
+    held unenforceable, the remaining provisions remain in effect.
+
+For licensing inquiries and all notices under this Agreement, contact:
+roman@moaigames.io
 
 ---
-NOTE TO OPERATOR: This is a placeholder license drafted for v0 shipping.
-Replace before first paying customer with the lawyer-reviewed EULA per
-tasks/ship-in-two-weeks.md Day 4. The placeholders argus.example.com +
-license@argus.example.com should also become real once the production
-domain is registered.
+NOTE: This beta EULA is a reasonable starting draft prepared for the private
+beta. It has NOT been reviewed by legal counsel. It must be reviewed and
+approved by qualified counsel (including governing-law / jurisdiction,
+consumer and export terms, and any region-specific requirements) before the
+paid commercial launch.

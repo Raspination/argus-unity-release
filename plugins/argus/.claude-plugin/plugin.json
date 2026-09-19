@@ -1,0 +1,7 @@
+{
+  "name": "argus",
+  "description": "Analyze Argus profiling captures out of the box. Use /argus:latest, /argus:compare, /argus:verify, or ask Claude about FPS, frame time, GC, memory, draw calls.",
+  "author": {
+    "name": "Moai Games"
+  }
+}
