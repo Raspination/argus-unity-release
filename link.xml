@@ -1,0 +1,3 @@
+<linker>
+  <assembly fullname="Argus.Runtime" preserve="all" />
+</linker>

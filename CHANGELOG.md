@@ -4,6 +4,12 @@ All notable changes to `com.argus-profiler.unity` are documented here. The forma
 
 ## [Unreleased]
 
+## [2.3.0] — 2026-09-20
+
+### Fixed
+- **Device-only code now actually ships.** Platform-specific code moved out of `Argus.Runtime.dll` into `Argus.Platform.Android.dll`, `Argus.Platform.iOS.dll` and `Argus.Platform.WebGL.dll` (under `Runtime/Platform/`, each restricted to its platform, self-registering at startup). Until now the single DLL was the Editor compile, so the Android thermal / native-heap / ANR bridge, the iOS MetricKit hang bridge and the WebGL editor bridge (and its `.jslib` files) were compiled out of every customer device build.
+- `link.xml` (preserves `Argus.Runtime` from IL2CPP managed stripping) now ships in the UPM package too, not only the Asset Store folder.
+
 ## [2.2.2] — 2026-09-19
 
 ### Added

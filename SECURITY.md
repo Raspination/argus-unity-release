@@ -15,7 +15,7 @@ Compiled DLLs don't make these attacks impossible (ILSpy / dotPeek recover reada
 
 The deliberate trade-offs:
 
-- **No obfuscation.** Argus relies on `JsonUtility` round-tripping `[Serializable]` types by field name, `[InitializeOnLoad]` discovery of attributed types, and one explicit reflection lookup. Symbol-renaming obfuscation silently breaks all three. We chose correctness over an obfuscation pass that would have produced a fragile product.
+- **Obfuscated, with the contract preserved.** The shipped assemblies are processed with Obfuscar: private and internal names are renamed (string literals are left as-is — an encoded-strings pass is trivially reversible and its runtime decoder does not load under Unity's Mono/IL2CPP). Everything the SDK exposes or depends on by name is kept verbatim — the public API and every public type (`Argus`, `ArgusConfig`, the `[Serializable]` payload classes), the JSON wire format, Unity message methods on MonoBehaviours, and attribute-discovered entry points. Each release's rename map is kept internally for support; stack traces from the SDK will show renamed private members, so include the package version in bug reports.
 - **Public install URL.** The repo is public so Unity Package Manager git-URL installs work without credential setup. Public means the bytes are downloadable; we accept that as the cost of frictionless install.
 - **No license phone-home.** The dashboard's per-API-key rate limits, plan-tier quotas, and the dashboard service itself are the commercial moat — not client-side license checks.
 

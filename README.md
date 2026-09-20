@@ -13,7 +13,7 @@ Production performance profiling for Unity games. Captures per-frame data, code-
 **Window → Package Manager → + → Add package from git URL**, paste:
 
 ```
-https://github.com/Raspination/argus-unity-release.git#v2.2.2
+https://github.com/Raspination/argus-unity-release.git#v2.3.0
 ```
 
 (Omitting the `#v...` tag suffix tracks `main` and picks up future versions on **Window → Package Manager → Refresh**.)
@@ -21,7 +21,7 @@ https://github.com/Raspination/argus-unity-release.git#v2.2.2
 To pin the version for a whole team, add it to `Packages/manifest.json` instead:
 
 ```json
-"com.argus-profiler.unity": "https://github.com/Raspination/argus-unity-release.git#v2.2.2"
+"com.argus-profiler.unity": "https://github.com/Raspination/argus-unity-release.git#v2.3.0"
 ```
 
 ### Via .unitypackage
@@ -34,7 +34,7 @@ An Asset Store listing is planned; once live, **Window → Package Manager → M
 
 ### Dependencies
 
-None. Argus ships as two compiled assemblies (`Argus.Runtime.dll`, `Argus.Editor.dll`) and needs nothing beyond Unity itself.
+None. Argus ships as compiled assemblies — `Argus.Runtime.dll`, `Argus.Editor.dll`, and small per-platform `Argus.Platform.Android|iOS|WebGL.dll` files under `Runtime/Platform/` that Unity includes only for that build target — and needs nothing beyond Unity itself. A `link.xml` is included so IL2CPP managed stripping never removes the runtime.
 
 ### Unity version
 
