@@ -13,7 +13,7 @@ Production performance profiling for Unity games. Captures per-frame data, code-
 **Window → Package Manager → + → Add package from git URL**, paste:
 
 ```
-https://github.com/Raspination/argus-unity-release.git#v2.3.0
+https://github.com/Raspination/argus-unity-release.git#v2.4.0
 ```
 
 (Omitting the `#v...` tag suffix tracks `main` and picks up future versions on **Window → Package Manager → Refresh**.)
@@ -21,7 +21,7 @@ https://github.com/Raspination/argus-unity-release.git#v2.3.0
 To pin the version for a whole team, add it to `Packages/manifest.json` instead:
 
 ```json
-"com.argus-profiler.unity": "https://github.com/Raspination/argus-unity-release.git#v2.3.0"
+"com.argus-profiler.unity": "https://github.com/Raspination/argus-unity-release.git#v2.4.0"
 ```
 
 ### Via .unitypackage
@@ -38,7 +38,7 @@ None. Argus ships as compiled assemblies — `Argus.Runtime.dll`, `Argus.Editor.
 
 ### Unity version
 
-`2021.3 LTS` and newer.
+Every Unity 6 edition: the assemblies are built with `6000.0` LTS and load unchanged in `6000.1`, `6000.2`, `6000.3` and later. Unity 2022 and older are not supported.
 
 ---
 

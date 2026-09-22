@@ -1,9 +1,9 @@
 {
   "name": "com.argus-profiler.unity",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "displayName": "Argus Profiler",
   "description": "Unity performance profiling utility. Captures per-event frame data, region attribution, and device diagnostics; uploads to the Argus dashboard for visualisation, regression alerts, and AI-assisted optimisation reports.",
-  "unity": "2021.3",
+  "unity": "6000.0",
   "author": {
     "name": "Argus",
     "url": "https://argus-profiler.com"
