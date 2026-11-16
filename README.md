@@ -13,7 +13,7 @@ Production performance profiling for Unity games. Captures per-frame data, code-
 **Window → Package Manager → + → Add package from git URL**, paste:
 
 ```
-https://github.com/Raspination/argus-unity-release.git#v2.4.0
+https://github.com/Raspination/argus-unity-release.git#v2.5.0
 ```
 
 (Omitting the `#v...` tag suffix tracks `main` and picks up future versions on **Window → Package Manager → Refresh**.)
@@ -21,7 +21,7 @@ https://github.com/Raspination/argus-unity-release.git#v2.4.0
 To pin the version for a whole team, add it to `Packages/manifest.json` instead:
 
 ```json
-"com.argus-profiler.unity": "https://github.com/Raspination/argus-unity-release.git#v2.4.0"
+"com.argus-profiler.unity": "https://github.com/Raspination/argus-unity-release.git#v2.5.0"
 ```
 
 ### Via .unitypackage
@@ -48,6 +48,8 @@ Argus's public API is gated by the **`ARGUS_ENABLED`** scripting define — opt-
 
 Enable via any of:
 
+- **Tools → Argus → Enable in Current Build Target** / **Enable in All Build Targets** / **Disable in Current Build Target** — available before you have an account
+- **Tools → Argus Control → Demo Mode → Enable instrumentation** (shown until you connect an account)
 - **Tools → Argus Control → Advanced → Instrumentation (ARGUS_ENABLED)**:
   - **Enable (active target)** — adds `ARGUS_ENABLED` to the active build target
   - **Enable (all targets)** — Standalone / Android / iOS / WebGL / tvOS / VisionOS / WSA at once
@@ -60,6 +62,25 @@ With the define absent, every `TriggerProfilerEvent` / `BeginRegion` / `EndRegio
 
 ---
 
+## Try it without an account (demo mode)
+
+Until this machine has connected to an Argus account, Argus runs in **demo mode**. Play-mode captures in the Editor are saved locally as a summary, with no limit on how many you take. **Tools → Argus Control** shows a **Demo Mode** card with an *Enable instrumentation* button and *Open Captures Folder*.
+
+| | Demo (no account) | Free account | Paid plans |
+|---|---|---|---|
+| Play-mode captures in the Editor | ✓ summary | ✓ full | ✓ full |
+| FPS, frame time (avg / min / max), frame count, duration | ✓ | ✓ | ✓ |
+| Memory (reserved, allocated, Mono heap), draw calls, batches, triangles, device info | ✓ | ✓ | ✓ |
+| Per-frame timeline, percentiles, subsystem timings, GC per frame | — | ✓ | ✓ |
+| Spike attribution by region and subsystem, region timings | — | ✓ | ✓ |
+| Hangs / ANRs, native metrics, frame debugger, scene and run context | — | ✓ | ✓ |
+| Device streaming (Android / iOS / WebGL) | — | ✓ | ✓ |
+| Web dashboard, history, build-to-build comparison, CI gate, alerts | — | ✓ (metered) | ✓ |
+
+The free account is metered on the server (sessions per month, projects, seats, history length); current limits and paid plans are at <https://argus-profiler.com/pricing>. Once a machine has connected successfully, local captures stay full even when you're offline.
+
+---
+
 ## Connect to the dashboard
 
 1. **Sign up** at <https://argus-profiler.com/signup>. A personal organisation is created automatically.
@@ -69,7 +90,7 @@ With the define absent, every `TriggerProfilerEvent` / `BeginRegion` / `EndRegio
 
 The console names the destination on success (`API key valid — uploading to project '…' (org '…')`), so a key for the wrong project is visible straight away. Only an HTTP 401/403 rejects a key; if the dashboard is unreachable (network error, 5xx, 408, 429) the current state is kept and validation retries every 15 s, up to 8 times.
 
-Until you have connected successfully at least once, the **Offline** toggle is disabled — there's no dashboard to be offline from yet. Every other section stays locked until you are connected or running offline.
+Until you have connected successfully at least once, the **Offline** toggle is disabled — there's no dashboard to be offline from yet. Until then the window shows the **Demo Mode** card; the other sections unlock once you are connected or running offline.
 
 ---
 
@@ -347,9 +368,9 @@ Everything is written to `ArgusCaptures/` under the Editor's `Application.persis
 
 | File | Contents |
 |---|---|
-| `{eventName}_{timestamp}.json` | Full capture — same shape as the dashboard upload |
-| `{eventName}_{timestamp}_ai.json` | LLM-optimised dense format — sampled curves, top spikes, region timings, run context |
-| `run_{timestamp}.json` / `run_{timestamp}.md` | Run digest, written when Argus stops |
+| `{eventName}_{timestamp}.json` | Full capture — same shape as the dashboard upload (a summary in demo mode) |
+| `{eventName}_{timestamp}_ai.json` | LLM-optimised dense format — sampled curves, top spikes, region timings, run context (summary only in demo mode, marked `"_captureMode": "demo-summary"`) |
+| `run_{timestamp}.json` / `run_{timestamp}.md` | Run digest, written when Argus stops (not written in demo mode) |
 | `connections_{timestamp}.log` | Connect / disconnect / rotation journal for that run |
 | `argus-editor.log` | Every `[Argus]` console line (errors with their first stack frame), trimmed at 2 MB |
 

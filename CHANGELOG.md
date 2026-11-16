@@ -4,10 +4,17 @@ All notable changes to `com.argus-profiler.unity` are documented here. The forma
 
 ## [Unreleased]
 
-## [2.4.0] — 2026-09-22
+## [2.5.0] — 2026-11-16
+
+### Added
+- **Demo mode — try Argus without an account.** Until a machine has connected to an Argus account, Play-mode captures in the Editor are saved locally as a summary (FPS, frame time avg/min/max, frame count, duration, memory, draw calls, batches, triangles, device info), with no limit on how many. The per-frame timeline, spike attribution, hangs/ANRs, native metrics, device streaming and the dashboard need a free account. The AI export marks demo captures `"_captureMode": "demo-summary"`, and the run digest is not written in demo mode. A machine that has connected once keeps full local captures offline.
+- **Demo Mode card in Argus Control.** Shown instead of the "locked" card until you connect: explains demo mode, offers *Enable instrumentation* and *Open Captures Folder*.
+- **Tools → Argus menu**: *Enable in Current Build Target*, *Enable in All Build Targets*, *Disable in Current Build Target*. The console warning already pointed at these, but they did not exist, so declining the first-import prompt left no way to enable capture without an account.
 
 ### Changed
 - **Built with Unity 6000.0 LTS.** Releases are now compiled against the oldest Unity 6 edition so the same assemblies load on every 6000.x editor; the package manifest requires `6000.0` (was `2021.3`, which the DLLs never actually supported).
+- 2.4.0 was inadvertently built with Unity 6000.3.7f1 and has been withdrawn; this is the first release actually compiled on the 6000.0 floor.
+- The demo scene's on-screen steps and the demo README lead with the no-account path. The demo README no longer claims UniTask / Editor Coroutines are required (there have been no dependencies since 2.2.0).
 
 ## [2.3.0] — 2026-09-20
 
